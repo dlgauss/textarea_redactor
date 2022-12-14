@@ -109,6 +109,30 @@ function checkNumberOfWords(){
 }
 
 
+    function newVersionAdd(){
+    let alreadyLoaded = document.querySelector('#loaded_keys').value
+    let elsSplitted = alreadyLoaded.split('\n')
+    
+    
+    for(let i=0;i<elsSplitted.length;i++){
+    
+        let str = elsSplitted[i]
+    
+        let regex = /\s+/g;
+        let result = str.replace(regex, " ").trim()
+        if(result != " "){
+            console.log(`[${i}] ${result}`)
+            let kw  = result.split(' ')[0]
+            let numberOFWords = result.split(' ')[1]
+            if(kw != ""){
+                addDivWithButton(kw,numberOFWords,'X')
+            }
+            
+        }
+    }
+   }
+
+
 //   let string = "His game would have been one for the ages anyway, even without having that COME out.His game would have been one for the ages anyway, even without having that come out.";
 //   let word = "come";
 //   let count = matchCount(string, word);
