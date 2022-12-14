@@ -122,8 +122,10 @@ function checkNumberOfWords(){
         let result = str.replace(regex, " ").trim()
         if(result != " "){
             console.log(`[${i}] ${result}`)
-            let kw  = result.split(' ')[0]
-            let numberOFWords = result.split(' ')[1]
+            let kw  = result.split('-')[0]
+            kw = kw.replaceAll('"','')
+           
+            let numberOFWords = result.split('-')[1]
             if(kw != ""){
                 addDivWithButton(kw,numberOFWords,'X')
             }
