@@ -109,7 +109,7 @@ function checkNumberOfWords(){
 }
 
 
-    function newVersionAdd(){
+    function load(){
     let alreadyLoaded = document.querySelector('#loaded_keys').value
     let elsSplitted = alreadyLoaded.split('\n')
     
