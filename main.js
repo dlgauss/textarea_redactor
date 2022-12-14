@@ -50,6 +50,8 @@ function addWord() {
     
     // let textToAdd = `${elValue} [${numberElvalue}]`
     addDivWithButton(elValue,numberElvalue,'X')
+    inputEl.value= ""
+    numberEl.value = ""
 
 }
 
